@@ -305,6 +305,8 @@ bool HFL110DCU::processFrameData(const std::vector<uint8_t>& frame_data)
       float extrinsic_y = *reinterpret_cast<const float*>(&frame_data[80]);
       float extrinsic_x = *reinterpret_cast<const float*>(&frame_data[84]);
 
+      // TODO: implement check if new extrinsics of dynamic reconfigure are available
+
       ROS_INFO_ONCE("Extrinsics received from DCU:");
       ROS_INFO_ONCE("    x: %f", extrinsic_x);
       ROS_INFO_ONCE("    y: %f", extrinsic_y);

@@ -97,6 +97,69 @@ public:
   ///
   bool setGlobalRangeOffset(double offset);
 
+  ///
+  /// Sets extrinsic translation roll
+  ///
+  /// @param[in] x extrinsic translation roll to set
+  ///
+  /// @return bool true if given extrinsic translation roll is set
+  ///
+  bool setExtrinsicRotationRoll(double roll);
+
+  ///
+  /// Sets extrinsic translation pitch
+  ///
+  /// @param[in] x extrinsic translation pitch to set
+  ///
+  /// @return bool true if given extrinsic translation pitch is set
+  ///
+  bool setExtrinsicRotationPitch(double pitch);
+
+  ///
+  /// Sets extrinsic translation yaw
+  ///
+  /// @param[in] x extrinsic translation yaw to set
+  ///
+  /// @return bool true if given extrinsic translation yaw is set
+  ///
+  bool setExtrinsicRotationYaw(double yaw);
+
+  ///
+  /// Sets extrinsic translation x
+  ///
+  /// @param[in] x extrinsic translation x to set
+  ///
+  /// @return bool true if given extrinsic translation x is set
+  ///
+  bool setExtrinsicTranslatationX(double x);
+
+  ///
+  /// Sets extrinsic translation y
+  ///
+  /// @param[in] y extrinsic translation y to set
+  ///
+  /// @return bool true if given extrinsic translation y is set
+  ///
+  bool setExtrinsicTranslatationY(double y);
+
+  ///
+  /// Sets extrinsic rotation z
+  ///
+  /// @param[in] z extrinsic rotation z to set
+  ///
+  /// @return bool true if given extrinsic rotation z is set
+  ///
+  bool setExtrinsicTranslatationZ(double z);
+
+  ///
+  /// Sets extrinsics_reconfigured flag
+  ///
+  /// @param[in] extrinsics_reconfigured flag to set
+  ///
+  /// @return bool true if given extrinsics reconfigured is set
+  ///
+  bool setExtrinsicsReconfigured(bool extrinsics_reconfigured);
+
 protected:
   /// Range Magic Number
   double range_magic_number_;

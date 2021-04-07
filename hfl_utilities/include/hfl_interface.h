@@ -118,6 +118,7 @@ protected:
   double roll_;
   double pitch_;
   double yaw_;
+  bool extrinsics_reconfigured_;
 
   /// time offset
   double time_offset_;
@@ -168,6 +169,69 @@ public:
   /// @return bool true if given global range offset is set
   ///
   virtual bool setGlobalRangeOffset(double offset) = 0;
+
+  ///
+  /// Sets extrinsic translation roll
+  ///
+  /// @param[in] x extrinsic translation roll to set
+  ///
+  /// @return bool true if given extrinsic translation roll is set
+  ///
+  virtual bool setExtrinsicRotationRoll(double roll) = 0;
+
+  ///
+  /// Sets extrinsic translation pitch
+  ///
+  /// @param[in] x extrinsic translation pitch to set
+  ///
+  /// @return bool true if given extrinsic translation pitch is set
+  ///
+  virtual bool setExtrinsicRotationPitch(double pitch) = 0;
+
+  ///
+  /// Sets extrinsic translation yaw
+  ///
+  /// @param[in] x extrinsic translation yaw to set
+  ///
+  /// @return bool true if given extrinsic translation yaw is set
+  ///
+  virtual bool setExtrinsicRotationYaw(double yaw) = 0;
+
+  ///
+  /// Sets extrinsic translation x
+  ///
+  /// @param[in] x extrinsic translation x to set
+  ///
+  /// @return bool true if given extrinsic translation x is set
+  ///
+  virtual bool setExtrinsicTranslatationX(double x) = 0;
+
+  ///
+  /// Sets extrinsic translation y
+  ///
+  /// @param[in] y extrinsic translation y to set
+  ///
+  /// @return bool true if given extrinsic translation y is set
+  ///
+  virtual bool setExtrinsicTranslatationY(double y) = 0;
+
+  ///
+  /// Sets extrinsic rotation z
+  ///
+  /// @param[in] z extrinsic rotation z to set
+  ///
+  /// @return bool true if given extrinsic rotation z is set
+  ///
+  virtual bool setExtrinsicTranslatationZ(double z) = 0;
+
+  ///
+  /// Sets extrinsics_reconfigured flag
+  ///
+  /// @param[in] extrinsics_reconfigured flag to set
+  ///
+  /// @return bool true if given extrinsics reconfigured is set
+  ///
+  virtual bool setExtrinsicsReconfigured(bool extrinsics_reconfigured) = 0;
 
   ///
   /// Parse packet into depth and intensity image

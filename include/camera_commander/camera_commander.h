@@ -74,6 +74,18 @@ enum error_codes
   slice_socket_error
 };
 
+
+/// @brief HFL110DCU v1 ethernet extrinsics struct
+struct SensorExtrinsics
+{
+  double_t extrinsic_x{0.0};
+  double_t extrinsic_y{0.0};
+  double_t extrinsic_z{0.0};
+  double_t extrinsic_yaw{0.0};
+  double_t extrinsic_pitch{0.0};
+  double_t extrinsic_roll{0.0};
+};
+
 ///
 /// @brief Implements the camera configuration and setup
 ///
@@ -185,6 +197,12 @@ private:
   
   /// Pointer to Flash camera
   std::shared_ptr<hfl::HflInterface> flash_;
+
+  /// SensorExtrinsics
+  SensorExtrinsics sensor_extrinsics_;
+
+  /// Flag for extrinsics beeing reconfigured or not
+  bool extrinsics_dynamic_reconfigured_{false};
 
   ///
   /// Sets CameraCommander current state

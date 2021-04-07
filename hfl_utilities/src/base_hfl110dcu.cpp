@@ -82,4 +82,64 @@ bool BaseHFL110DCU::setGlobalRangeOffset(double offset)
     return false;
   }
 }
+
+bool BaseHFL110DCU::setExtrinsicRotationPitch(double pitch)
+{
+  try {
+    pitch_ = pitch;
+    return true;
+  } catch (const std::exception& e) {
+    return false;
+  }
+}
+
+bool BaseHFL110DCU::setExtrinsicRotationYaw(double yaw)
+{
+  try {
+    yaw_ = yaw;
+    return true;
+  } catch (const std::exception& e) {
+    return false;
+  }
+}
+
+bool BaseHFL110DCU::setExtrinsicRotationRoll(double roll)
+{
+  try {
+    roll_ = roll;
+    return true;
+  } catch (const std::exception& e) {
+    return false;
+  }
+}
+
+bool BaseHFL110DCU::setExtrinsicTranslatationX(double x)
+{
+  try {
+    x_ = x;
+    return true;
+  } catch (const std::exception& e) {
+    return false;
+  }
+}
+
+bool BaseHFL110DCU::setExtrinsicTranslatationY(double y)
+{
+  try {
+    y_ = y;
+    return true;
+  } catch (const std::exception& e) {
+    return false;
+  }
+}
+
+bool BaseHFL110DCU::setExtrinsicTranslatationZ(double z)
+{
+  try {
+    z_ = z;
+    return true;
+  } catch (const std::exception& e) {
+    return false;
+  }
+}
 }  // namespace hfl

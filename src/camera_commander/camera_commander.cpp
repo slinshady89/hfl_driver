@@ -503,6 +503,18 @@ void CameraCommander::dynamicPametersCallback(hfl_driver::HFLConfig& config, uin
     // camera is active
     if (flash_->setGlobalRangeOffset(config.global_range_offset))
       ROS_INFO("%s/global_range_offset: %f", namespace_.c_str(), config.global_range_offset);
+    if (flash_->setExtrinsicTranslatationX(config.x))
+      ROS_INFO("%s/Translation x: %f", namespace_.c_str(), config.x);
+    if (flash_->setExtrinsicTranslatationX(config.y))
+      ROS_INFO("%s/Translation y: %f", namespace_.c_str(), config.y);
+    if (flash_->setExtrinsicTranslatationX(config.z))
+      ROS_INFO("%s/Translation z: %f", namespace_.c_str(), config.z);
+    if (flash_->setExtrinsicRotationYaw(config.yaw))
+      ROS_INFO("%s/Rotation yaw: %f", namespace_.c_str(), config.yaw);
+    if (flash_->setExtrinsicRotationYaw(config.pitch))
+      ROS_INFO("%s/Rotation pitch: %f", namespace_.c_str(), config.pitch);
+    if (flash_->setExtrinsicRotationYaw(config.roll))
+      ROS_INFO("%s/Rotation roll: %f", namespace_.c_str(), config.roll);
   }
 }
 }  // end of namespace hfl
